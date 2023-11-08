@@ -1,6 +1,4 @@
-
 # Line Following Robot (LFR)
-
 
 ## Introduction
 
@@ -12,7 +10,7 @@ A Line Following Robot is an autonomous robot that is designed to follow a path 
 
 Before you get started, make sure you have the following components ready:
 
-- **Arduino or Microcontroller**: You'll need a microcontroller board (e.g., Arduino nano or uno) to control the robot.
+- **Arduino or Microcontroller**: You'll need a microcontroller board (e.g., Arduino) to control the robot.
 
 - **Infrared (IR) Sensors**: These sensors are used to detect the line on the ground.
 
@@ -20,7 +18,7 @@ Before you get started, make sure you have the following components ready:
 
 - **Motor Driver**: A motor driver is essential to control the speed and direction of the motors.
 
-- **Chassis**: The physical structure of the bot.
+- **Chassis**: The physical structure of the robot.
 
 - **Battery/Power Supply**: To provide power to the robot.
 
@@ -36,25 +34,20 @@ Above is the circuit diagram for the Line Following Robot. It shows how all the 
 
 ### Working of LFR
 
-The Line Following Robot works based on the principle of IR sensor feedback. The IR sensors are placed on the bottom of the robot and are used to detect the contrast between the line and the background. Here's how it works:
+The Line Following Robot operates using a binary control system. The IR sensors are placed on the bottom of the robot and are used to detect the contrast between the line and the background. Here's how it works:
 
 1. The IR sensors constantly measure the amount of reflected infrared light.
 
 2. When the sensor is over the line, it detects more reflected light due to the contrast, and when it's off the line, it detects less.
 
-3. The microcontroller processes the sensor data and determines which direction the robot should move to stay on the line.
+3. Based on the sensor readings, the robot's microcontroller controls the motors. It can be a simple high or low control system.
 
-### How to Control Motors According to IR
-
-- To make the robot follow the line, you need to program the microcontroller to adjust the motor speeds based on the IR sensor readings.
-
-- For example, if the left sensor detects more IR reflection (over the line), you might need to increase the speed of the right motor to steer the robot back on track.
-
-- Experiment with different thresholds and motor control strategies to fine-tune the robot's performance.
+   - If the left sensor detects more IR reflection (over the line), the left motor may be set to high, and the right motor to low to steer the robot back on track.
+   - If the right sensor detects more IR reflection, the right motor may be set to high, and the left motor to low.
 
 ## Uploading the Code
 
-You can find the Arduino code for this project in the `code` directory of this repository. Upload the code to your microcontroller to make the robot operate according to the IR sensor readings.
+You can find the Arduino code for this project in the `code` directory of this repository. Upload the code to your microcontroller to implement the binary control system that operates the motors according to the IR sensor readings.
 
 ## Application in the Real World
 
@@ -70,6 +63,6 @@ Line Following Robots have practical applications in various industries:
 
 ## Enjoy the DIY Experience
 
-Building a Line Following Robot is a fun and educational DIY project. Feel free to explore, experiment, and modify the design to suit your needs. Enjoy the journey of learning and creating your own robot!
+Building a Line Following Robot with a binary control system is a fun and educational DIY project. Feel free to explore, experiment, and modify the design to suit your needs. Enjoy the journey of learning and creating your own robot!
 
-If you have any questions or need assistance, please don't hesitate to reach out.
+If you have any questions or need assistance, please don't hesitate to reach out. 
